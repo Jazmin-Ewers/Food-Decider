@@ -14,6 +14,7 @@
         width=150" height="70">
     </a>
     <% if (user) { %>
+      <div>Welcome <%= user.name %></div>
       <a href="/friend/new"	<%- title === 'Add Friend' ? 'class="active"' : '' %>>
         ADD FRIEND</a>
       <a href="/restaurant/new" <%- title === 'Add Restaurant' ? 'class="active"' : '' %>>ADD RESTAURANT</a>
