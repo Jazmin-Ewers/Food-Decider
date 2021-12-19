@@ -14,10 +14,6 @@ const friendSchema = new Schema({
   food_choice_3: {
     type: String,
     enum: ['Mexican', 'Chinese', 'American']
-  },
-  diet_restriction: {
-    type: String,
-    enum: ['Vegan', 'Peanut Allergy', 'Vegetarian']
   }
 });
 
@@ -29,11 +25,7 @@ const userSchema = new Schema({
   },
   email: String,
   avatar: String,
-  zipcode: Number,
-diet_restriction: {
-    type: String,
-    enum: ['Vegan', 'Peanut Allergy', 'Vegetarian']
-  },
+  location: String,
   food_choice_1: {
     type: String,
     enum: ['Mexican', 'Chinese', 'American']

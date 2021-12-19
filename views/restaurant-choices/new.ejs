@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Restaurant Name</th>
+        <th>Location</th>
+        <th>Categories</th>
+        <th></th>
+      </tr>
+    </thead>
+    <% businesses.forEach((element, index) => { %>
+    <tbody>
+        <tr>
+          <td><%= businesses[index].name %></td>
+          <td><%= businesses[index].location.address1 %></td>
+          <td><%= businesses[index].categories[0].title %></td>
+        </tr>
+    <% }); %>
+      </tbody>
+    </table>
+
+<%- include('../partials/footer') %>
