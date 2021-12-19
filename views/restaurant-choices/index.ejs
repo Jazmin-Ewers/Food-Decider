@@ -1,18 +1,16 @@
 <%- include('../partials/header') %>
   <div class="container pt-4">
     <div class="table-responsive">
+      <form class="new-form" action="/restaurant-choices" method="POST">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>
-                <form class="new-form" action="/restaurant-choices" method="POST">
                     <label>Location:</label>
                     <input type="text" name="location">
                     <br><br>
                     <label>Cuisine Choice:</label>
                     <input type="text" name="food_choice_1">
-                    <input type="submit" value="Add Food Choice">
-                  </form>
             </th>
             <th><button class="btn btn-md btn-primary" id="addBtn" type="button">Add Friend</button>
             </th>
@@ -21,6 +19,8 @@
         <tbody id="tbody">
         </tbody>
       </table>
+      <input type="submit" value="Submit">
+    </form>
 <script>
     var rowIdx = 0;
   
@@ -30,14 +30,11 @@
       // Adding a row inside the tbody.
       $('#tbody').append(`<tr id="R${++rowIdx}">
             <td>
-                <form class="new-form" action="/restaurant-choices" method="POST">
-                    <label>Location:</label>
-                    <input type="text" name="location">
+                    <label>Name:</label>
+                    <input type="text" name="friend_name">
                     <br><br>
                     <label>Cuisine Choice:</label>
-                    <input type="text" name="food_choice_1">
-                    <input type="submit" value="Add Food Choice">
-                  </form> 
+                    <input type="text" name="friend_food_choice_1">
             </td>
              <td class="text-center">
               <button class="btn btn-danger remove" 

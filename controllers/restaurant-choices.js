@@ -23,13 +23,16 @@ async function index(req, res) {
     const users = await User.find({});
     res.render("restaurant-choices/index", { title: "Choose a Restuarant", users});
   }
-// Create new Friend 
 
-
-// Update the User's food choices and location
-function update(req, res, next) {
+// Update the User's and User's friend food choices and location
+function update(req, res) {
+  // Create friend choices
+  req.user.friend.push(req.body.friend_name);
+  req.user.friend.push(req.body.friend_food_choice_1);
+  // Update user choices 
   req.user.food_choice_1 = req.body.food_choice_1
   req.user.location = req.body.location
+  // Based on the top crusine choice seach Restaurants with that cruisine  
   searchRequest.location = req.body.location;
   for (let key in restaurantCategories){
     if (req.body.food_choice_1 === key) {
@@ -38,9 +41,10 @@ function update(req, res, next) {
   }
   client.search(searchRequest).then(response => {
     const businesses = response.jsonBody.businesses;
+    req.user.save(function(err) {
     res.render("restaurant-choices/new", { title: "Choose a Restuarant", businesses });
   });
-  next();
-  }
+});
+}
 
 
