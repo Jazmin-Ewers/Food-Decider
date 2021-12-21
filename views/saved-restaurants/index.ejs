@@ -8,12 +8,12 @@
         <th></th>
       </tr>
     </thead>
-    <% saved_restaurants.forEach((element, index) => { %>
+    <% saved_restaurants.forEach(function(s) { %>
     <tbody>
         <tr>
-          <td><%= saved_restaurants.restaurant_name %></td>
-          <td><%= saved_restaurants.address %></td>
-          <td><%= saved_restaurants.crusine %></td>
+          <td><%= s.restaurant_name %></td>
+          <td><%= s.address %></td>
+          <td><%= s.crusine %></td>
         </tr>
     <% }); %>
       </tbody>

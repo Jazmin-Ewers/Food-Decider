@@ -10,15 +10,15 @@
     </thead>
     <% businesses.forEach((element, index) => { %>
     <tbody>
-      <form class="new-form" action="/restaurant-choices/new" method="POST">
         <tr>
-          <td> <input type = "hidden" name = "restaurant_name" value= <% businesses[index].name}%>> </td>
-          <td> <input type = "hidden" name = "address" value= <% businesses[index].location.address1 %>> </td>
-          <td> <input type = "hidden" name="crusine" value= <% businesses[index].categories[0].title %>> </td>
+          <form class="new-form" action="/saved-restaurants" method="POST">
+          <td> <input type = "hidden" name = "restaurant_name" value = "<%- businesses[index].name%>"> <% businesses[index].name%></td>
+          <td> <input type = "hidden" name = "address" value = "<%- businesses[index].location.address1%>"> <%= businesses[index].location.address1 %></td>
+          <td> <input type = "hidden" name = "cuisine" value = "<%- businesses[index].categories[0].title%>"> <% businesses[index].categories[0].title%></td>
           <td> <input type="submit" value="Save"> </td>
+        </form>
         </tr>
     <% }); %>
-  </form>
       </tbody>
     </table>
 

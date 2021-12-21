@@ -5,7 +5,7 @@ const saved_restaurantsSchema = new Schema({
   user: {type: Schema.Types.ObjectId, ref: 'User'},
   restaurant_name: String,
   address: String,
-  crusine: String
+  cuisine: String
 }, {
   timestamps: true
 });
