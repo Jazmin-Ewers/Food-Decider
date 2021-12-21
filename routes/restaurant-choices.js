@@ -5,7 +5,10 @@ const restaurantchoicesCtrl = require('../controllers/restaurant-choices');
 // GET "/restaurant-choices" - Index Route
 router.get('/', restaurantchoicesCtrl.index);
 
-// POST	"/restaurant-choices" - Update Route 
-router.post('/', restaurantchoicesCtrl.update);
+// POST	/restaurant-choices	restaurantchoices.bestChoices 
+router.post('/', restaurantchoicesCtrl.bestChoices);
+
+// POST	/restaurant-choices/new	restaurantchoices.create
+router.post('/new', restaurantchoicesCtrl.create);
 
 module.exports = router;

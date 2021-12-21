@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const saved_restaurantsSchema = new Schema({
-    name: {type: String, required: true},
+  user: {type: Schema.Types.ObjectId, ref: 'User'},
+  restaurant_name: String,
+  address: String,
+  crusine: String
 }, {
   timestamps: true
 });

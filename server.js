@@ -10,6 +10,7 @@ var methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const restaurantChoicesRouter = require('./routes/restaurant-choices');
 const usersRouter = require('./routes/users');
+const savedresturantsRouter = require('./routes/saved-resturants.js');
 
 require('dotenv').config();
 require('./config/database');
@@ -43,6 +44,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/restaurant-choices', restaurantChoicesRouter);
 app.use('/users', usersRouter);
+app.use('/', savedresturantsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

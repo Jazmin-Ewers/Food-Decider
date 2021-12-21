@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Restaurant Name</th>
+        <th>Location</th>
+        <th>Categories</th>
+        <th></th>
+      </tr>
+    </thead>
+    <% saved_restaurants.forEach((element, index) => { %>
+    <tbody>
+        <tr>
+          <td><%= saved_restaurants.restaurant_name %></td>
+          <td><%= saved_restaurants.address %></td>
+          <td><%= saved_restaurants.crusine %></td>
+        </tr>
+    <% }); %>
+      </tbody>
+    </table>
+
+<%- include('../partials/footer') %>
