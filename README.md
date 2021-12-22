@@ -1,5 +1,6 @@
 # Food-Decider
-![Imgur]https://i.imgur.com/00TU5WD.png) 
+
+![Imgur](https://i.imgur.com/00TU5WD.png) 
 
 ### Technologies Used
 - JavaScript
