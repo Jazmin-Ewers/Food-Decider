@@ -26,11 +26,19 @@ async function index(req, res) {
   }
 
 function bestChoices(req, res) {
-  // Based on the top crusine choice seach Restaurants with that cruisine  
-  searchRequest.location = req.body.location;
+  // Find the logged in User's location.
+  User.findOne({'user._id': req.user.id}, function(err, user) { 
+  searchRequest.location = req.user.location;
   searchRequest.categories = req.body.food_choice_1;
+  // Based on the top crusine choices seach Restaurants with that cruisine 
   client.search(searchRequest).then(response => {
     const businesses = response.jsonBody.businesses;
   res.render("restaurant-choices/new", { title: "Choose a Restuarant", businesses });
 });
+})
 }
+
+client.search(searchRequest).then(response => {
+  const businesses = response.jsonBody.businesses;
+  console.log(businesses[0].name)
+});

@@ -7,14 +7,6 @@ router.get("/", function (req, res, next) {
   res.render("home");
 });
 
-router.get("/location", function (req, res) {
-  res.render("location");
-});
-
-router.post("/location", function (req, res) {
-  res.render("location");
-});
-
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
