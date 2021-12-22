@@ -4,3 +4,4 @@ module.exports = function(req, res, next) {
     // if not, redirect to login page
     res.redirect('/auth/google');
   }
+

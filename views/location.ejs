@@ -10,10 +10,19 @@
 </head>
 <body>
   <main>
-    <img alt="Login" src="/images/login_image.jpeg" width="700" height="900">
+    <img alt="Login" src="/images/location_hambruger.jpeg" width="700" height="900">
 <div class="box">
   <br> <br>
-    <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-lowercase btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in using your Google Account</a> </div>
+  <h4>We are looking for restaurants in...</h4>
+    <div class="col-md-12">
+        <form action="/location" method="POST">
+            <div class="form-group">
+              <input type="text" name = "location" class="form-control" placeholder="Memphis, TN">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
   <br> <br>
-  <p class="text-inverse text-center">Already have an account? <a href="/auth/google" data-abc="true">Login</a></p>
 </div>
+
+ 
