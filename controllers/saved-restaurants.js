@@ -20,7 +20,7 @@ module.exports = {
     console.log(req.user);
     saved_restaurant.save(function(err) {
       if (err) return render("/restaurant-choices");
-      res.redirect("/restaurant-choices");
+      res.redirect('/saved-restaurants');
     });
   }
 

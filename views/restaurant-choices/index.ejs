@@ -1,22 +1,16 @@
 <%- include('../partials/header') %>
-  <div class="container pt-4">
-    <div class="table-responsive">
+<div class="card text-center " id="container">
+  <div class="card-body">
       <form class="new-form" action="/restaurant-choices" method="POST">
       <table class="table table-bordered">
         <tbody id="tbody">
           <tr>
-            <div>Welcome <%= user.name %></div>
+            <% if (user) { %>
+            <h1>Welcome <%= user.name %></h1>
+            <% } %>
             <fieldset>
             <th>
-                    <label>Cuisine Choice:</label>
                     <input list="cuisine" id="cuisine" class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_1">
-                    <datalist id="cuisine">
-                      <option value="Mexican">
-                      <option value="Asian">
-                      <option value="Vegetarian">
-                      <option value="Indian">
-                      <option value="Vegan">
-                    </datalist>
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_2">
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_3">
             </th>
@@ -82,5 +76,3 @@
   });
 </script>
 <%- include('../partials/footer') %>
-
-

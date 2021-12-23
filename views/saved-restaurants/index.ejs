@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
-  <table id="list">
+  <table class="table">
     <thead>
       <tr>
-        <th>Restaurant Name</th>
-        <th>Location</th>
-        <th>Categories</th>
-        <th></th>
+        <th scope="col">Restaurant Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Cuisine</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <% saved_restaurants.forEach(function(s) { %>
@@ -14,10 +14,8 @@
           <form class="new-form" action="/saved-restaurants/<%= s._id %>?_method=DELETE" method="POST">
             <td> <input type = "hidden" name = "restaurant_name" value = "<%- s.restaurant_name %>"> <%= s.restaurant_name %></td>
             <td> <input type = "hidden" name = "address" value = "<%- s.address %>"> <%= s.address %></td>
-            <td> <input type = "hidden" name = "cuisine" value = "<%- s.crusine %>"> <%= s.crusine %></td>
-            <% if (user && user._id.equals(s.user)) { %>
+            <td> <input type = "hidden" name = "cuisine" value = "<%- s.cuisine %>"> <%= s.cuisine %></td>
             <td> <input type="submit" value="DELETE"> </td>
-            <% } %>
           </form>
         </tr>
     <% }); %>

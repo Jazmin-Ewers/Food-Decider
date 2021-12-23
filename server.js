@@ -6,6 +6,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
+const isLoggedIn = require('./config/auth');
 
 const indexRouter = require('./routes/index');
 const restaurantChoicesRouter = require('./routes/restaurant-choices');
@@ -45,7 +46,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/restaurant-choices', restaurantChoicesRouter);
 app.use('/users', usersRouter);
-app.use('/', savedrestaurantsRouter);
+app.use('/', isLoggedIn, savedrestaurantsRouter);
 app.use('/', locationRouter);
 
 // catch 404 and forward to error handler
