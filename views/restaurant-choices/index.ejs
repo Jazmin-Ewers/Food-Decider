@@ -14,14 +14,20 @@
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_2">
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_3">
             </th>
-            <th><button class="btn btn-md btn-primary" id="addBtn" type="button">Add Friend</button>
-            </th>
           </fieldset>
           </tr>
         </tbody>
       </table>
-      <input type="submit" value="Submit">
+      <input class="btn btn-md btn-primary" type="submit" value="Submit">
     </form>
+    </div>
+    </div>
+<br>
+    <div class="card text-center " id="container">
+      <div class="card-body">
+    <button class="btn btn-md btn-primary" id="addBtn" type="button">Add Friend</button>
+    </div>
+    </div>
 <script>
     var rowIdx = 0;
   // jQuery button click event to add a row.
@@ -29,15 +35,10 @@
       // Adding a row inside the tbody.
       $('#tbody').append(`<tr id="R${++rowIdx}">
             <td>
-                    <label>Cuisine Choice:</label>
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_1"> 
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_2"> 
                     <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_3"> 
             </td>
-             <td class="text-center">
-              <button class="btn btn-danger remove" 
-                  type="button">Remove</button>
-              </td>
              </tr>`);
   });
   
