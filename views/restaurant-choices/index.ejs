@@ -10,15 +10,15 @@
             <% } %>
             <fieldset>
             <th>
-                    <input list="cuisine" id="cuisine" class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_1">
-                    <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_2">
-                    <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_3">
+                    <input list="cuisine" id="cuisine" class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_1">
+                    <input class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_2">
+                    <input class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_3">
             </th>
           </fieldset>
           </tr>
         </tbody>
       </table>
-      <input class="btn btn-md btn-primary" type="submit" value="Submit">
+      <button class="btn btn-md btn-primary" id="addBtn" type="submit">Submit</button>
     </form>
     </div>
     </div>
@@ -35,10 +35,11 @@
       // Adding a row inside the tbody.
       $('#tbody').append(`<tr id="R${++rowIdx}">
             <td>
-                    <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_1"> 
-                    <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_2"> 
-                    <input class="bar" type="text" placeholder="Search Cuisine Choice..." name="food_choice_3"> 
+                    <input class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_1"> 
+                    <input class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_2"> 
+                    <input class="bar" type="text" placeholder="Cuisine Choice..." name="food_choice_3"> 
             </td>
+
              </tr>`);
   });
   
