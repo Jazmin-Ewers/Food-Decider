@@ -7,7 +7,7 @@
 
 
 ### Description
-- This application allows you to enter your location, your cuisine perferences, and your friend's cuisine perferences then shows you the best restaurants based on those perferences.
+- This application allows you to enter your location, your cuisine perferences, and your friend's cuisine perferences then shows you the best restaurants based on those perferences using Yelp's api.
 - It allows includes features to like saving your favorite restaurants.
 
 ### Technologies Used
@@ -17,6 +17,7 @@
 - Node js
 - Express js
 - Mongo db
+- Yelp Api
 
 ### Project Planning Trello Board
 https://trello.com/b/tdfX5VDx/food-decider-app
